@@ -15,7 +15,7 @@ html {
   font-style: normal;
   font-weight: 400;
   font-size: $fz-default;
-  line-height: 24px;
+  line-height: 22px;
   font-family: $ff-placeholder;
   color: $color-default-black;
 
@@ -35,7 +35,7 @@ body {
 }
 
 a {
-  color: $color-default-black;
+  color: inherit;
   text-decoration: none;
 }
 
