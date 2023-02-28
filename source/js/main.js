@@ -24,6 +24,42 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+let currentOpenedSection = '';
+function manageSections(evt, currentSection) {
+
+  if (currentOpenedSection && currentOpenedSection !== evt.target.closest('.opened')) {
+    currentOpenedSection.classList.remove('opened');
+  }
+
+  currentSection.classList.toggle('opened');
+  currentOpenedSection = currentSection;
+}
+
+
+const footerRightNav = document.querySelector('.footer-right__nav');
+const showNavBtn = document.querySelector('.js-show-nav');
+
+function onShowNavBtnClick(evt) {
+  evt.preventDefault();
+  manageSections(evt, footerRightNav);
+}
+
+if (showNavBtn) {
+  showNavBtn.addEventListener('click', onShowNavBtnClick);
+}
+
+const footerRightContacts = document.querySelector('.footer-right__contacts');
+const showContactsBtn = document.querySelector('.js-show-contacts');
+
+function onShowContactsBtnClick(evt) {
+  evt.preventDefault();
+  manageSections(evt, footerRightContacts);
+}
+
+if (showNavBtn) {
+  showContactsBtn.addEventListener('click', onShowContactsBtnClick);
+}
+
 // ---------------------------------
 
 // ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.

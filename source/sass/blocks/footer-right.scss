@@ -1,0 +1,160 @@
+.footer-right {
+  display: flex;
+  width: 69.26%;
+
+  @include vp-1023 {
+    width: 100%;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    border-bottom: 1px solid rgba(248, 253, 255, 0.7);
+    border-top: 1px solid rgba(248, 253, 255, 0.7);
+  }
+
+  h3 {
+    font-family: "RobotoCondensed", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin: 0 0 20px;
+
+    @include vp-767 {
+      margin: 0;
+    }
+  }
+}
+
+.footer-right__nav {
+  margin-right: auto;
+  width: 55.62%;
+
+  @include vp-1023 {
+    width: 220px;
+  }
+
+  @include vp-1023 {
+    width: 100%;
+    margin-right: 0;
+    position: relative;
+  }
+
+  @include vp-767 {
+    border-bottom: 1px solid rgba(248, 253, 255, 0.7);
+    padding: 20px 25px;
+
+    &.opened {
+      .footer-right__nav-toggle {
+        background-image: url("../img/svg/icon-minus.svg");
+      }
+
+      h3 {
+        margin-bottom: 15px;
+      }
+
+      .site-nav {
+        display: flex;
+      }
+    }
+  }
+}
+
+.footer-right__nav-toggle {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  background-image: url("../img/svg/icon-plus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 26px;
+  top: 20px;
+  display: none;
+
+  @include vp-767 {
+    display: flex;
+  }
+}
+
+.footer-right__contacts {
+  display: flex;
+  flex-direction: column;
+  width: 40.82%;
+
+  @include vp-1023 {
+    width: 320px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    position: relative;
+    padding: 20px 25px;
+
+    &.opened {
+      .footer-right__contacts-toggle {
+        background-image: url("../img/svg/icon-minus.svg");
+      }
+
+      h3 {
+        margin-bottom: 15px;
+      }
+
+      p {
+        display: flex;
+      }
+
+      a {
+        display: flex;
+      }
+    }
+  }
+
+  p {
+    margin: 0 0 10px;
+    opacity: 0.7;
+
+    @include vp-767 {
+      margin-bottom: 15px;
+      display: none;
+    }
+  }
+
+  a {
+    line-height: 25px;
+    opacity: 0.7;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
+
+.footer-right__contacts-toggle {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  background-image: url("../img/svg/icon-plus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 26px;
+  top: 20px;
+  display: none;
+
+  @include vp-767 {
+    display: flex;
+  }
+}

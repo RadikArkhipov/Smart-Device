@@ -1,0 +1,24 @@
+.socials-list {
+  margin: 0 0 0 10px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include vp-1023 {
+    margin-left: 0;
+  }
+}
+
+.socials-list__item {
+  margin-right: 15px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  a {
+    display: flex;
+    padding: 5px;
+  }
+}
