@@ -1304,6 +1304,7 @@ button,
   background-image: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
   background-image: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
   position: fixed;
+  z-index: 1;
 }
 
 .page-header__container {
@@ -1526,6 +1527,8 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1691,6 +1694,184 @@ button,
   margin-bottom: 0;
 }
 
+.advantages {
+  padding-top: 120px;
+  padding-bottom: 90px;
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.advantages__item {
+  width: 48.77%;
+  margin-right: 2.45%;
+  margin-bottom: 30px;
+  min-height: 300px;
+  -webkit-box-shadow: inset 0 0 0 1px #ebebeb;
+  box-shadow: inset 0 0 0 1px #ebebeb;
+  position: relative;
+}
+
+.advantages__item::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color: #00b2ff;
+  top: 0;
+}
+
+.advantages__item:nth-child(2n) {
+  margin-right: 0;
+}
+
+.advantages__item-wrapper {
+  padding: 40px 45px 35px;
+}
+
+.advantages__item-wrapper h3 {
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 400;
+  color: #00b2ff;
+  margin: 0 0 15px;
+}
+
+.advantages__item-wrapper p {
+  margin: 0;
+  color: #041827;
+}
+
+.advantages__item-wrapper svg {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.about-us {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 100px;
+}
+
+.about-us img {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.about-us__wrapper {
+  margin-left: 100px;
+}
+
+.about-us__wrapper.opened .about-us__text-enterprises {
+  margin-bottom: 15px;
+}
+
+.about-us__wrapper.opened .about-us__text-team {
+  display: block;
+}
+
+.about-us__wrapper.opened .about-us__text-quality {
+  display: block;
+}
+
+.about-us__wrapper.opened .about-us__button-show {
+  display: none;
+}
+
+.about-us__wrapper.opened .about-us__button-close {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.about-us__wrapper h2 {
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 51px;
+  font-weight: 400;
+  color: #041827;
+  margin: 0 0 15px;
+}
+
+.about-us__wrapper p {
+  color: #041827;
+}
+
+.about-us__text-orders {
+  margin: 0 0 20px;
+}
+
+.about-us__text-manufacturers {
+  margin: 0;
+}
+
+.about-us__text-enterprises {
+  margin: 0 0 35px;
+}
+
+.about-us__text-team {
+  margin: 0 0 15px;
+  display: none;
+}
+
+.about-us__text-quality {
+  margin: 0 0 20px;
+  display: none;
+}
+
+.about-us__button-show {
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  min-width: 180px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #f8fdff;
+  color: #00b2ff;
+  border: 1px solid #00b2ff;
+  border-radius: 3px;
+  padding: 14px 13px 13px;
+  cursor: pointer;
+}
+
+.about-us__button-close {
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  min-width: 180px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #f8fdff;
+  color: #00b2ff;
+  border: 1px solid #00b2ff;
+  border-radius: 3px;
+  padding: 14px 13px 13px;
+  cursor: pointer;
+  display: none;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -1731,6 +1912,30 @@ button,
     }
   }
 */
+
+@media (min-width: 1024px) {
+  .advantages__item {
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+}
+
+@media (min-width: 1024px) and (hover: hover) {
+  .advantages__item:hover:not(.focus-visible) {
+    background-color: #00b2ff;
+    -webkit-box-shadow: 0 0 0 1px #00b2ff;
+    box-shadow: 0 0 0 1px #00b2ff;
+  }
+
+  .advantages__item:hover:not(.focus-visible) svg {
+    fill: #f2f5f7;
+  }
+
+  .advantages__item:hover:not(.focus-visible) h3 {
+    color: #f2f5f7;
+  }
+}
 
 @media (max-width: 1279px) {
   .user-nav {
@@ -1817,6 +2022,8 @@ button,
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -1878,6 +2085,41 @@ button,
 
   .site-nav__item:last-child {
     margin-bottom: 10px;
+  }
+
+  .advantages {
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
+
+  .advantages__item {
+    min-height: 360px;
+    width: 47.9%;
+    margin-right: 4.2%;
+  }
+
+  .advantages__item-wrapper {
+    padding-right: 30px;
+  }
+
+  .about-us {
+    padding-bottom: 80px;
+  }
+
+  .about-us__wrapper {
+    margin-left: 29px;
+  }
+
+  .about-us__wrapper h2 {
+    margin-bottom: 7px;
+  }
+
+  .about-us__text-orders {
+    margin-bottom: 15px;
+  }
+
+  .about-us__text-enterprises {
+    margin-bottom: 20px;
   }
 }
 
@@ -2050,6 +2292,91 @@ button,
 
   .site-nav {
     display: none;
+  }
+
+  .advantages {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .advantages__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .advantages__item {
+    margin-right: 0;
+    width: 100%;
+    min-height: 340px;
+  }
+
+  .advantages__item-wrapper {
+    padding: 30px 30px 35px;
+  }
+
+  .advantages__item-wrapper h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .advantages__item-wrapper svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .about-us img {
+    display: none;
+  }
+
+  .about-us {
+    padding-bottom: 80px;
+  }
+
+  .about-us__wrapper {
+    margin-left: 0;
+  }
+
+  .about-us__wrapper.opened .about-us__text-enterprises {
+    display: block;
+  }
+
+  .about-us__wrapper.opened .about-us__text-manufacturers {
+    margin-bottom: 15px;
+  }
+
+  .about-us__wrapper h2 {
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  .about-us__wrapper p {
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .about-us__text-manufacturers {
+    margin-bottom: 20px;
+  }
+
+  .about-us__text-enterprises {
+    display: none;
+  }
+
+  .about-us__button-show {
+    min-width: 160px;
+    padding: 9px 15px 8px;
+  }
+
+  .about-us__button-close {
+    min-width: 160px;
+    padding: 9px 15px 8px;
   }
 }
 

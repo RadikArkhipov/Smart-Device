@@ -56,8 +56,30 @@ function onShowContactsBtnClick(evt) {
   manageSections(evt, footerRightContacts);
 }
 
-if (showNavBtn) {
+if (showContactsBtn) {
   showContactsBtn.addEventListener('click', onShowContactsBtnClick);
+}
+
+const aboutUsWrapper = document.querySelector('.about-us__wrapper');
+const showAboutBtn = document.querySelector('.js-show-about');
+const closeAboutBtn = document.querySelector('.js-close-about');
+
+function onShowAboutBtnClick(evt) {
+  evt.preventDefault();
+  manageSections(evt, aboutUsWrapper);
+}
+
+if (showAboutBtn) {
+  showAboutBtn.addEventListener('click', onShowAboutBtnClick);
+}
+
+function onCloseAboutBtnClick(evt) {
+  evt.preventDefault();
+  manageSections(evt, aboutUsWrapper);
+}
+
+if (closeAboutBtn) {
+  closeAboutBtn.addEventListener('click', onCloseAboutBtnClick);
 }
 
 // ---------------------------------
