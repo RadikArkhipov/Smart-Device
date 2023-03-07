@@ -21,66 +21,129 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+
+    function addMask(currentTelInput) {
+      window.iMaskJS(currentTelInput, {mask: '+{7}(000)000-00-00'});
+    }
+
+    let currentOpenedSection = '';
+    function manageSections(evt, currentSection) {
+
+      if (currentOpenedSection && currentOpenedSection !== evt.target.closest('.opened')) {
+        currentOpenedSection.classList.remove('opened');
+      }
+
+      currentSection.classList.toggle('opened');
+      currentOpenedSection = currentSection;
+    }
+
+
+    const footerNav = document.querySelector('[data-footer-nav]');
+    const showNavBtn = document.querySelector('[data-show-nav]');
+
+    function onShowNavBtnClick(evt) {
+      evt.preventDefault();
+      manageSections(evt, footerNav);
+    }
+
+    if (showNavBtn) {
+      showNavBtn.addEventListener('click', onShowNavBtnClick);
+    }
+
+    const footerContacts = document.querySelector('[data-footer-contacts]');
+    const showContactsBtn = document.querySelector('[data-show-contacts]');
+
+    function onShowContactsBtnClick(evt) {
+      evt.preventDefault();
+      manageSections(evt, footerContacts);
+    }
+
+    if (showContactsBtn) {
+      showContactsBtn.addEventListener('click', onShowContactsBtnClick);
+    }
+
+    const aboutUs = document.querySelector('[data-about-us]');
+    const showAboutBtn = document.querySelector('[data-show-about]');
+    const closeAboutBtn = document.querySelector('[data-close-about]');
+
+    function onShowAboutBtnClick(evt) {
+      evt.preventDefault();
+      manageSections(evt, aboutUs);
+    }
+
+    if (showAboutBtn) {
+      showAboutBtn.addEventListener('click', onShowAboutBtnClick);
+    }
+
+    function onCloseAboutBtnClick(evt) {
+      evt.preventDefault();
+      manageSections(evt, aboutUs);
+    }
+
+    if (closeAboutBtn) {
+      closeAboutBtn.addEventListener('click', onCloseAboutBtnClick);
+    }
+
+    const ESC_KEYCODE = 27;
+
+    const overlay = document.querySelector('div[data-close-modal]');
+    const callBackPopup = document.querySelector('[data-modal="feedback"]');
+    const closeButton = callBackPopup.querySelector('button[data-close-modal]');
+    const callBackButton = document.querySelector('[data-open-modal]');
+
+    const closePopup = function () {
+      callBackPopup.classList.remove('is-active');
+      document.removeEventListener('keydown', onEscButtonPress);
+    };
+
+    const onEscButtonPress = function (evt) {
+      if (evt.keyCode === ESC_KEYCODE) {
+        closePopup();
+      }
+    };
+
+    const openPopup = function () {
+      callBackPopup.classList.add('is-active');
+      const input = document.querySelector('input[type="text"]');
+      input.focus();
+      document.addEventListener('keydown', onEscButtonPress);
+    };
+
+    callBackButton.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      openPopup();
+    });
+
+    closeButton.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      closePopup();
+    });
+
+    overlay.addEventListener('click', function () {
+      closePopup();
+    });
+
+    // const input = document.querySelector('.write__form--modal  input[type="text"]');
+
+    // input.focus();
+
+    // mask
+
+    (function () {
+      const writeFormModal = document.querySelector('.write__form--modal input[type="tel"]');
+      const phone = document.querySelector('.write__form  input[type="tel"]');
+
+      if (phone) {
+        addMask(phone);
+      }
+
+      if (writeFormModal) {
+        addMask(writeFormModal);
+      }
+    })();
   });
 });
 
-let currentOpenedSection = '';
-function manageSections(evt, currentSection) {
-
-  if (currentOpenedSection && currentOpenedSection !== evt.target.closest('.opened')) {
-    currentOpenedSection.classList.remove('opened');
-  }
-
-  currentSection.classList.toggle('opened');
-  currentOpenedSection = currentSection;
-}
-
-
-const footerRightNav = document.querySelector('.footer-right__nav');
-const showNavBtn = document.querySelector('.js-show-nav');
-
-function onShowNavBtnClick(evt) {
-  evt.preventDefault();
-  manageSections(evt, footerRightNav);
-}
-
-if (showNavBtn) {
-  showNavBtn.addEventListener('click', onShowNavBtnClick);
-}
-
-const footerRightContacts = document.querySelector('.footer-right__contacts');
-const showContactsBtn = document.querySelector('.js-show-contacts');
-
-function onShowContactsBtnClick(evt) {
-  evt.preventDefault();
-  manageSections(evt, footerRightContacts);
-}
-
-if (showContactsBtn) {
-  showContactsBtn.addEventListener('click', onShowContactsBtnClick);
-}
-
-const aboutUsWrapper = document.querySelector('.about-us__wrapper');
-const showAboutBtn = document.querySelector('.js-show-about');
-const closeAboutBtn = document.querySelector('.js-close-about');
-
-function onShowAboutBtnClick(evt) {
-  evt.preventDefault();
-  manageSections(evt, aboutUsWrapper);
-}
-
-if (showAboutBtn) {
-  showAboutBtn.addEventListener('click', onShowAboutBtnClick);
-}
-
-function onCloseAboutBtnClick(evt) {
-  evt.preventDefault();
-  manageSections(evt, aboutUsWrapper);
-}
-
-if (closeAboutBtn) {
-  closeAboutBtn.addEventListener('click', onCloseAboutBtnClick);
-}
 
 // ---------------------------------
 

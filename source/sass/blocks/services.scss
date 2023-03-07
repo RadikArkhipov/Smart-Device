@@ -1,0 +1,230 @@
+.services {
+  background-color: #041827;
+  color: #ffffff;
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+}
+
+.services__container {
+  padding-top: 70px;
+  padding-bottom: 140px;
+
+
+  @include vp-1023 {
+    padding-top: 60px;
+    padding-bottom: 75px;
+  }
+
+  @include vp-767 {
+    padding-top: 50px;
+    padding-bottom: 86px;
+  }
+}
+
+.services__title {
+  font-size: 36px;
+  line-height: 51px;
+  font-weight: 400;
+  margin: 0 0 50px;
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.services__title-mobile {
+  font-size: 28px;
+  line-height: 39px;
+  margin: 0 0 40px;
+  display: none;
+
+  @include vp-767 {
+    display: block;
+  }
+}
+
+.services__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+
+  @include vp-1023 {
+    flex-direction: column;
+  }
+}
+
+.services__item {
+  min-height: 650px;
+  width: 28.68%;
+  margin-right: 6.96%;
+
+  @include vp-1023 {
+    min-height: 250px;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &--production {
+    @media (min-width: 1024px) {
+      background-image: url("../img/services-bg-1.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      @include retina {
+        background-image: url("../img/services-bg-1@2x.jpg");
+      }
+    }
+
+    @media (min-width: 768px) {
+      background-image: url("../img/services-tl-bg-1.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      @include retina {
+        background-image: url("../img/services-tl-bg-1@2x.jpg");
+      }
+    }
+
+    @include vp-767 {
+      background-image: url("../img/services-ml-bg-1.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      @include retina {
+        background-image: url("../img/services-ml-bg-1@2x.jpg");
+      }
+    }
+  }
+
+  &--mounting {
+    @media (min-width: 1024px) {
+      background-image: url("../img/services-bg-2.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      @include retina {
+        background-image: url("../img/services-bg-2@2x.jpg");
+      }
+    }
+
+    @media (min-width: 768px) {
+      background-image: url("../img/services-tl-bg-2.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      @include retina {
+        background-image: url("../img/services-tl-bg-2@2x.jpg");
+      }
+    }
+
+    @include vp-767 {
+      background-image: url("../img/services-ml-bg-2.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      @include retina {
+        background-image: url("../img/services-ml-bg-2@2x.jpg");
+      }
+    }
+  }
+
+  &--complete {
+    @media (min-width: 1024px) {
+      background-image: url("../img/services-bg-3.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      @include retina {
+        background-image: url("../img/services-bg-3@2x.jpg");
+      }
+    }
+
+    @media (min-width: 768px) {
+      background-image: url("../img/services-tl-bg-3.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      @include retina {
+        background-image: url("../img/services-tl-bg-3@2x.jpg");
+      }
+    }
+
+    @include vp-767 {
+      background-image: url("../img/services-ml-bg-3.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      @include retina {
+        background-image: url("../img/services-ml-bg-3@2x.jpg");
+      }
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  a {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+  }
+
+  h3 {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    margin: 0;
+    padding: 50px 80px 0 40px;
+
+    @include vp-1023 {
+      padding: 40px 0 0 45px;
+    }
+
+    @include vp-767 {
+      font-size: 18px;
+      padding: 30px 86px 0 34px;
+    }
+  }
+
+  span {
+    width: 60px;
+    height: 60px;
+    border-radius: 3px 0 0 0;
+    background-color: #00b2ff;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    @include vp-1023 {
+      bottom: -150px;
+    }
+
+    @include vp-767 {
+      width: 40px;
+      height: 40px;
+      bottom: -160px;
+    }
+  }
+}
