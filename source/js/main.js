@@ -123,9 +123,6 @@ window.addEventListener('DOMContentLoaded', () => {
       closePopup();
     });
 
-    // const input = document.querySelector('.write__form--modal  input[type="text"]');
-
-    // input.focus();
 
     // mask
 

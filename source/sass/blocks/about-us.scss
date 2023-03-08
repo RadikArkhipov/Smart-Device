@@ -3,7 +3,7 @@
   padding-bottom: 100px;
 
   img {
-    height: max-content;
+    max-width: max-content;
 
     @include vp-767 {
       display: none;
