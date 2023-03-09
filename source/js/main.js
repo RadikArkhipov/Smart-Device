@@ -86,13 +86,16 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const ESC_KEYCODE = 27;
 
+    const body = document.querySelector('body');
     const overlay = document.querySelector('div[data-close-modal]');
     const callBackPopup = document.querySelector('[data-modal="feedback"]');
     const closeButton = callBackPopup.querySelector('button[data-close-modal]');
     const callBackButton = document.querySelector('[data-open-modal]');
+    const input = callBackPopup.querySelector('input[type="text"]');
 
     const closePopup = function () {
       callBackPopup.classList.remove('is-active');
+      body.classList.remove('body-lock');
       document.removeEventListener('keydown', onEscButtonPress);
     };
 
@@ -104,7 +107,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const openPopup = function () {
       callBackPopup.classList.add('is-active');
-      const input = document.querySelector('input[type="text"]');
+      body.classList.add('body-lock');
       input.focus();
       document.addEventListener('keydown', onEscButtonPress);
     };

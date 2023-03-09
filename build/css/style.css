@@ -2245,6 +2245,10 @@ button,
   top: 0;
 }
 
+.body-lock {
+  overflow: hidden;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
