@@ -85,6 +85,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     const ESC_KEYCODE = 27;
+    const MAX_NUMBERS = 16;
 
     const body = document.querySelector('body');
     const overlay = document.querySelector('div[data-close-modal]');
@@ -92,6 +93,28 @@ window.addEventListener('DOMContentLoaded', () => {
     const closeButton = callBackPopup.querySelector('button[data-close-modal]');
     const callBackButton = document.querySelector('[data-open-modal]');
     const input = callBackPopup.querySelector('input[type="text"]');
+    const formElement = document.querySelector('[data-form="feedback"]');
+    const modalForm = callBackPopup.querySelector('[data-form-modal]');
+
+    if (formElement) {
+      formElement.addEventListener('submit', function (evt) {
+        const telInput = formElement.querySelector('input[type="tel"]');
+        const telValue = telInput.value;
+        if (telValue.length < MAX_NUMBERS) {
+          evt.preventDefault();
+        }
+      });
+    }
+
+    if (modalForm) {
+      modalForm.addEventListener('submit', function (evt) {
+        const telInput = modalForm.querySelector('input[type="tel"]');
+        const telValue = telInput.value;
+        if (telValue.length < MAX_NUMBERS) {
+          evt.preventDefault();
+        }
+      });
+    }
 
     const closePopup = function () {
       callBackPopup.classList.remove('is-active');

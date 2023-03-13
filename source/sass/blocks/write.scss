@@ -22,12 +22,12 @@
   padding-bottom: 250px;
 
   @include vp-1023 {
-    padding-top: 50px;
-    padding-bottom: 125px;
+    padding-top: 46px;
+    padding-bottom: 123px;
   }
 
   @include vp-767 {
-    padding-top: 50px;
+    padding-top: 46px;
     padding-bottom: 90px;
   }
 }
@@ -45,10 +45,6 @@
 
     @include vp-1439 {
       width: 450px;
-    }
-
-    @include vp-1279 {
-      width: 280px;
     }
 
     @include vp-1023 {
@@ -94,6 +90,7 @@
     @include vp-767 {
       font-size: 14px;
       line-height: 19px;
+      margin-bottom: 34px;
     }
   }
 }
@@ -104,6 +101,10 @@
   width: 100%;
   margin-bottom: 35px;
 
+  @include vp-767 {
+    margin-bottom: 32px;
+  }
+
   textarea {
     font-size: 16px;
     line-height: 22px;
@@ -111,11 +112,18 @@
     border: 0;
     background-color: rgba(4, 20, 39, 0.15);
     color: #ffffff;
-    outline: 0;
     cursor: pointer;
     padding: 25px 15px;
     min-height: 155px;
     margin-left: 5px;
+
+    @media (min-width: 1024px) {
+      transition: 0.3s $tf-default;
+
+      @include hover {
+        opacity: 0.8;
+      }
+    }
 
     @include vp-1023 {
       margin-left: 0;
@@ -133,10 +141,11 @@
 
 .write__inputs-wrapper {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 26px;
 
   @include vp-767 {
     flex-direction: column;
+    margin-bottom: 19px;
   }
 
   input {
@@ -149,21 +158,28 @@
     background-color: rgba(4, 20, 39, 0.15);
     padding: 14px 15px;
     color: #ffffff;
-    outline: 0;
     cursor: pointer;
+
+    @media (min-width: 1024px) {
+      transition: 0.3s $tf-default;
+
+      @include hover {
+        opacity: 0.8;
+      }
+    }
 
     @include vp-1023 {
       margin-left: 0;
       width: 47.9%;
+    }
+
+    @include vp-767 {
+      width: 100%;
       margin-bottom: 20px;
 
       &:last-child {
         margin-bottom: 0;
       }
-    }
-
-    @include vp-767 {
-      width: 100%;
     }
 
     &::placeholder {
@@ -201,11 +217,12 @@
   @include vp-1023 {
     margin-left: 0;
     width: 39.67%;
+    margin-right: 13%;
   }
 
   @include vp-767 {
     width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 16px;
   }
 }
 
@@ -214,8 +231,14 @@
   display: flex;
   align-items: flex-end;
 
+  @include vp-1023 {
+    margin-top: 7px;
+    align-items: flex-start;
+  }
+
   @include vp-767 {
     width: 100%;
+    align-items: flex-end;
   }
 
   input:checked + label::before {
@@ -258,8 +281,8 @@
   .write__titles-wrapper {
     h2 {
       font-size: 30px;
-      line-height: 42px;
-      margin: 0 0 15px;
+      line-height: 30px;
+      margin: 0 0 11px;
     }
 
     p {
@@ -272,6 +295,7 @@
 
     textarea {
       margin-left: 0;
+      padding: 16px 15px;
 
       @include vp-767 {
         min-height: 180px;
@@ -281,6 +305,7 @@
 
   .write__inputs-wrapper {
     flex-direction: column;
+    margin-bottom: 21px;
 
     input {
       margin: 0 0 20px;
@@ -302,7 +327,7 @@
 
   .write__button {
     width: 100%;
-    margin: 0 0 20px 0;
+    margin: 0 0 17px 0;
   }
 
   .write__checkbox {
@@ -310,12 +335,15 @@
     justify-content: center;
 
     label {
+      margin-left: 10px;
+
       br {
         display: none;
       }
 
       &::before {
         top: 0;
+        left: -25px;
       }
     }
   }

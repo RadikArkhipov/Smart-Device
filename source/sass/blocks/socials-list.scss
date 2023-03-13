@@ -20,5 +20,13 @@
   a {
     display: flex;
     padding: 5px;
+
+    @media (min-width: 1024px) {
+      transition: 0.3s $tf-default;
+
+      @include hover {
+        opacity: 0.8;
+      }
+    }
   }
 }

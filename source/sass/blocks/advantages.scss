@@ -46,6 +46,10 @@
     margin-right: 0;
     width: 100%;
     min-height: 340px;
+
+    &--distinction {
+      min-height: 325px;
+    }
   }
 
   &::after {
@@ -71,6 +75,10 @@
       h3 {
         color: #f2f5f7;
       }
+
+      p {
+        color: #f2f5f7;
+      }
     }
   }
 
@@ -84,6 +92,8 @@
 
   @include vp-1023 {
     padding-right: 30px;
+    padding-bottom: 11px;
+    padding-top: 41px;
   }
 
   @include vp-767 {
@@ -96,26 +106,48 @@
     line-height: 34px;
     font-weight: 400;
     color: #00b2ff;
-    margin: 0 0 15px;
+    margin: 0 0 9px;
 
     @include vp-767 {
       font-size: 20px;
       line-height: 28px;
+      margin-bottom: 10px;
     }
   }
 
   p {
     margin: 0;
     color: #041827;
+
+    br {
+      display: none;
+
+      @include vp-1023 {
+        display: block;
+      }
+    }
   }
 
   svg {
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: 7px;
 
     @include vp-767 {
       width: 30px;
       height: 30px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &--distinction {
+    h3 {
+      @include vp-1023 {
+        margin-bottom: 0;
+      }
+
+      @include vp-767 {
+        margin-bottom: 17px;
+      }
     }
   }
 }

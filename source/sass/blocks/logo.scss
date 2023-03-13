@@ -1,0 +1,13 @@
+.logo__header {
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.logo__header-mobile {
+  display: none;
+
+  @include vp-767 {
+    display: flex;
+  }
+}

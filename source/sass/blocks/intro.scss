@@ -15,7 +15,7 @@
   @include vp-1023 {
     min-height: 640px;
     background-position: center, -130px top;
-    padding-top: 165px;
+    padding-top: 178px;
   }
 
   @include vp-767 {
@@ -44,7 +44,7 @@
     @include vp-1023 {
       font-size: 64px;
       line-height: 75px;
-      margin-bottom: 20px;
+      margin-bottom: 5px;
     }
 
     @include vp-767 {
@@ -60,7 +60,7 @@
     margin: 0 0 40px;
 
     @include vp-1023 {
-      margin-bottom: 50px;
+      margin-bottom: 53px;
     }
 
     @include vp-767 {
@@ -89,7 +89,7 @@
   color: #f2f5f7;
 
   @include vp-1023 {
-    margin-left: 40px;
+    margin-left: 46px;
   }
 
   @include vp-767 {
