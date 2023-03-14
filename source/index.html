@@ -247,9 +247,9 @@
                 <div class="write__contacts-information">
                   <div class="write__inputs-wrapper">
                     <input type="text" name="name" placeholder="Имя" aria-label="Имя" required>
-                    <span class="">Имя не может состоять из цифр</span>
+                    <span class="write__name-error">Имя не может состоять из цифр</span>
                     <input type="tel" name="tel" placeholder="Телефон" aria-label="Телефон" required>
-                    <span>Неверно введен номер телефона</span>
+                    <span class="write__phone-error">Неверно введен номер телефона</span>
                   </div>
                   <textarea placeholder="Ваш вопрос"></textarea>
                 </div>
@@ -341,7 +341,7 @@
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
-          <form action="https://echo.htmlacademy.ru" method="post" class="write__form write__form--modal" data-form-modal>
+          <form action="https://echo.htmlacademy.ru" method="post" class="write__form write__form--modal"  data-form-modal>
             <div class="write__form-wrapper">
               <div class="write__titles-wrapper">
                 <h2>Закажите звонок</h2>
@@ -349,7 +349,7 @@
               </div>
               <div class="write__contacts-information">
                 <div class="write__inputs-wrapper">
-                  <input type="text" name="name" placeholder="Имя" aria-label="Имя" required autofocus>
+                  <input type="text" name="name" placeholder="Имя" aria-label="Имя" required>
                   <input type="tel" name="tel" placeholder="Телефон" aria-label="Телефон" required>
                 </div>
                 <textarea placeholder="Ваш вопрос"></textarea>
