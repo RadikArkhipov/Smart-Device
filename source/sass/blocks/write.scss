@@ -191,33 +191,6 @@
       margin: 0;
     }
   }
-
-  span {
-    font-size: 10px;
-    line-height: 10px;
-    width: 159px;
-    height: 32px;
-    box-shadow: inset 0 0 0 1px #eb5757;
-    border-radius: 8px;
-    padding: 7px 12px 8px;
-    position: absolute;
-    background-color: #ffffff;
-    justify-content: center;
-    align-items: center;
-    color: #eb5757;
-  }
-}
-
-.write__name-error {
-  top: -25px;
-  right: 323px;
-  display: none;
-}
-
-.write__phone-error {
-  top: -25px;
-  right: 15px;
-  display: none;
 }
 
 .write__consent {

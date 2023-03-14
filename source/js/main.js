@@ -131,18 +131,14 @@ window.addEventListener('DOMContentLoaded', () => {
     const openPopup = function () {
       callBackPopup.classList.add('is-active');
       body.classList.add('body-lock');
-
-      const focusableElementsString = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], [contenteditable]';
-      const focusableElements = callBackPopup.querySelectorAll(focusableElementsString);
-
-      focusableElements = Array.prototype.slice.call(focusableElements);
-
-      const firstTabStop = focusableElements[0];
-      const lastTabStop = focusableElements[focusableElements.length - 1];
-
       setTimeout(function () {
         input.focus();
       }, 1000);
+
+      const focusableElementsString = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], [contenteditable]';
+      const focusableElements = callBackPopup.querySelectorAll(focusableElementsString);
+      const firstTabStop = focusableElements[0];
+      const lastTabStop = focusableElements[focusableElements.length - 1];
 
       document.addEventListener('keydown', function (evt) {
         if (evt.keyCode === 9) {
