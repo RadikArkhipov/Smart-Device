@@ -267,6 +267,11 @@
   }
 
   input {
+    &:focus + label {
+      opacity: 0.8;
+      box-shadow: inset 0 0 0 1px #041427;
+    }
+
     &:checked + label::before {
       background-image: url("../img/svg/icon-checkbox.svg");
       background-repeat: no-repeat;

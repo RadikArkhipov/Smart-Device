@@ -246,16 +246,16 @@
                 </div>
                 <div class="write__contacts-information">
                   <div class="write__inputs-wrapper">
-                    <input type="text" name="name" placeholder="Имя" aria-label="Имя" required>
-                    <input type="tel" name="tel" placeholder="Телефон" aria-label="Телефон" required>
+                    <input type="text" name="name" placeholder="Имя" aria-label="Имя" tabindex="1" required>
+                    <input type="tel" name="tel" placeholder="Телефон" aria-label="Телефон" tabindex="2" required>
                     <span>Неверно введен номер телефона</span>
                   </div>
-                  <textarea placeholder="Ваш вопрос"></textarea>
+                  <textarea placeholder="Ваш вопрос" tabindex="3"></textarea>
                 </div>
                 <div class="write__consent">
-                  <button type="submit" class="btn write__button">Задать вопрос</button>
+                  <button type="submit" class="btn write__button" tabindex="5">Задать вопрос</button>
                   <div class="write__checkbox">
-                    <input class="visually-hidden" type="checkbox" name="consent" id="consent" checked="checked" tabindex="1" required>
+                    <input class="visually-hidden" type="checkbox" name="consent" id="consent" checked="checked" tabindex="4" required>
                     <label for="consent">Я согласен на обработку <br> персональных данных</label>
                   </div>
                 </div>
@@ -348,22 +348,22 @@
               </div>
               <div class="write__contacts-information">
                 <div class="write__inputs-wrapper">
-                  <input type="text" name="name" placeholder="Имя" aria-label="Имя" required>
-                  <input type="tel" name="tel" placeholder="Телефон" aria-label="Телефон" required>
+                  <input type="text" name="name" placeholder="Имя" aria-label="Имя" tabindex="6" required>
+                  <input type="tel" name="tel" placeholder="Телефон" aria-label="Телефон" tabindex="7" required>
                   <span>Неверно введен номер телефона</span>
                 </div>
-                <textarea placeholder="Ваш вопрос"></textarea>
+                <textarea placeholder="Ваш вопрос" tabindex="8"></textarea>
               </div>
               <div class="write__consent">
-                <button type="submit" class="btn write__button">Отправить</button>
+                <button type="submit" class="btn write__button" tabindex="10">Отправить</button>
                 <div class="write__checkbox">
-                  <input class="visually-hidden" type="checkbox" name="consent" id="consent-modal" checked="checked" required>
+                  <input class="visually-hidden" type="checkbox" name="consent" id="consent-modal" checked="checked" tabindex="9" required>
                   <label for="consent-modal">Я согласен на обработку <br> персональных данных</label>
                 </div>
               </div>
             </div>
           </form>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" tabindex="11" data-close-modal>
             <svg width="20" height="20" fill="#ffffff">
               <use href="#icon-close"></use>
             </svg>
