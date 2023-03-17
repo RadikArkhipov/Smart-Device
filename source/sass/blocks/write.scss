@@ -37,24 +37,21 @@
 
   picture {
     margin-right: auto;
-  }
-
-  img {
-    height: 285px;
-    margin-top: 80px;
-
-    @include vp-1439 {
-      width: 450px;
-    }
+    width: 41.8%;
 
     @include vp-1023 {
       display: none;
     }
   }
+
+  img {
+    height: 285px;
+    margin-top: 80px;
+  }
 }
 
 .write__form-wrapper {
-  width: 585px;
+  width: 47.95%;
 
   @include vp-1023 {
     width: 100%;
@@ -161,6 +158,17 @@
     color: #ffffff;
     cursor: pointer;
 
+    &.form-error {
+      box-shadow: inset 0 0 0 1px #eb5757;
+      background-image: url("../img/svg/icon-error.svg");
+      background-repeat: no-repeat;
+      background-position: right 18px center;
+    }
+
+    &.form-error + span {
+      display: flex;
+    }
+
     @media (min-width: 1024px) {
       transition: 0.3s $tf-default;
 
@@ -190,6 +198,22 @@
     &:last-child {
       margin: 0;
     }
+  }
+
+  span {
+    font-size: 11px;
+    line-height: 11px;
+    width: 221px;
+    height: 32px;
+    border-radius: 8px;
+    padding: 7px 12px;
+    position: absolute;
+    top: -25px;
+    right: 5px;
+    background-color: #041827;
+    justify-content: center;
+    align-items: center;
+    display: none;
   }
 }
 
@@ -242,10 +266,16 @@
     align-items: flex-end;
   }
 
-  input:checked + label::before {
-    background-image: url("../img/svg/icon-checkbox.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+  input {
+    &:checked + label::before {
+      background-image: url("../img/svg/icon-checkbox.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &:focus + label::before {
+      opacity: 0.8;
+    }
   }
 
   label {
@@ -254,6 +284,11 @@
     line-height: 16px;
     margin-left: 20px;
     color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+
+    &:focus {
+      opacity: 0.8;
+    }
 
     @include vp-767 {
       margin-left: 28px;
@@ -319,6 +354,11 @@
       &:last-child {
         margin: 0;
       }
+    }
+
+    span {
+      top: 45px;
+      right: 5px;
     }
   }
 

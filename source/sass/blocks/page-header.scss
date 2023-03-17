@@ -14,6 +14,10 @@
   padding-top: 30px;
   padding-bottom: 35px;
 
+  @include vp-1279 {
+    padding-right: 100px;
+  }
+
   @include vp-1023 {
     padding-right: 70px;
     padding-top: 20px;

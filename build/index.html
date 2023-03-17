@@ -248,13 +248,14 @@
                   <div class="write__inputs-wrapper">
                     <input type="text" name="name" placeholder="Имя" aria-label="Имя" required>
                     <input type="tel" name="tel" placeholder="Телефон" aria-label="Телефон" required>
+                    <span>Неверно введен номер телефона</span>
                   </div>
                   <textarea placeholder="Ваш вопрос"></textarea>
                 </div>
                 <div class="write__consent">
                   <button type="submit" class="btn write__button">Задать вопрос</button>
                   <div class="write__checkbox">
-                    <input class="visually-hidden" type="checkbox" name="consent" id="consent" checked="checked" required>
+                    <input class="visually-hidden" type="checkbox" name="consent" id="consent" checked="checked" tabindex="1" required>
                     <label for="consent">Я согласен на обработку <br> персональных данных</label>
                   </div>
                 </div>
@@ -349,6 +350,7 @@
                 <div class="write__inputs-wrapper">
                   <input type="text" name="name" placeholder="Имя" aria-label="Имя" required>
                   <input type="tel" name="tel" placeholder="Телефон" aria-label="Телефон" required>
+                  <span>Неверно введен номер телефона</span>
                 </div>
                 <textarea placeholder="Ваш вопрос"></textarea>
               </div>

@@ -102,6 +102,7 @@ window.addEventListener('DOMContentLoaded', () => {
         const telValue = telInput.value;
         if (telValue.length < MAX_NUMBERS) {
           evt.preventDefault();
+          telInput.classList.add('form-error');
         }
       });
     }
@@ -112,6 +113,7 @@ window.addEventListener('DOMContentLoaded', () => {
         const telValue = telInput.value;
         if (telValue.length < MAX_NUMBERS) {
           evt.preventDefault();
+          telInput.classList.add('form-error');
         }
       });
     }

@@ -6,7 +6,7 @@
   width: 67.67%;
 
   @include vp-1279 {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   @include vp-1023 {
@@ -15,9 +15,10 @@
 
   div {
     display: flex;
-    width: 61.14%;
+    width: 64%;
     margin-right: auto;
     flex-wrap: wrap;
+    justify-content: space-between;
 
     @include vp-1023 {
       font-size: 0;
@@ -30,7 +31,8 @@
 .user-nav__mail-link {
   display: flex;
   align-items: center;
-  margin-right: auto;
+  width: 50%;
+  padding: 5px 0;
 
   @media (min-width: 1024px) {
     transition: 0.3s $tf-default;
@@ -42,6 +44,7 @@
 
   @include vp-1023 {
     padding: 10px 10px;
+    width: 40%;
   }
 
   svg {
@@ -56,6 +59,8 @@
 .user-nav__phone-link {
   display: flex;
   align-items: center;
+  padding: 5px 0;
+  width: 50%;
 
   @media (min-width: 1024px) {
     transition: 0.3s $tf-default;
@@ -67,6 +72,7 @@
 
   @include vp-1023 {
     padding: 10px 10px;
+    width: 40%;
   }
 
   svg {
