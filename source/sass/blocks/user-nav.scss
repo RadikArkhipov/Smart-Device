@@ -12,26 +12,36 @@
   @include vp-1023 {
     width: 100px;
   }
+}
 
-  div {
-    display: flex;
-    width: 64%;
-    margin-right: auto;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.user-nav__list {
+  display: flex;
+  width: 64%;
+  padding: 0;
+  margin: 0 auto 0 0;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
-    @include vp-1023 {
-      font-size: 0;
-      margin-right: 0;
-      width: 100%;
-    }
+  @include vp-1023 {
+    font-size: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+.user-nav__item {
+  display: flex;
+  width: 50%;
+
+  @include vp-1023 {
+    width: 40%;
   }
 }
 
 .user-nav__mail-link {
   display: flex;
   align-items: center;
-  width: 50%;
   padding: 5px 0;
 
   @media (min-width: 1024px) {
@@ -44,7 +54,6 @@
 
   @include vp-1023 {
     padding: 10px 10px;
-    width: 40%;
   }
 
   svg {
@@ -60,7 +69,6 @@
   display: flex;
   align-items: center;
   padding: 5px 0;
-  width: 50%;
 
   @media (min-width: 1024px) {
     transition: 0.3s $tf-default;
@@ -72,7 +80,6 @@
 
   @include vp-1023 {
     padding: 10px 10px;
-    width: 40%;
   }
 
   svg {

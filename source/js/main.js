@@ -135,7 +135,7 @@ window.addEventListener('DOMContentLoaded', () => {
       body.classList.add('body-lock');
       setTimeout(function () {
         input.focus();
-      }, 1000);
+      }, 100);
 
       const focusableElementsString = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], [contenteditable]';
       const focusableElements = callBackPopup.querySelectorAll(focusableElementsString);
